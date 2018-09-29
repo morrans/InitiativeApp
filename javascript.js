@@ -16,19 +16,32 @@ function newQuote() {
 	document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
 }
 
+var player = {
+    name: "John",
+    score: 0,
+};
+
 var players = []
 var temp2 = '';
 
 function addPlayers() {
-	var txt;
 	var temp = '';	
 	temp = prompt("Enter player")
 	if (temp == "" || temp == null) {
 		return;
 	} else {
+		var temp = {
+			name: temp,
+			score: 0,
+		}
 		players.push(temp);
-		document.getElementById('player1').innerHTML = players[0];
+		//document.getElementById('player1').innerHTML = players[0];
 	}
+	var e = "<hr/>";   
+	for (var y=0; y<players.length; y++) {
+	  e += "Playya " + y + " = " + players[y].name + "<br/>";
+	}
+	document.getElementById("player1").innerHTML = e;
 
 }
 
@@ -38,7 +51,7 @@ var array = Array();
 function add_element_to_array()
 {
  array[x] = document.getElementById("text1").value;
- alert("Element: " + array[x] + " Added at index " + x);
+ //alert("Element: " + array[x] + " Added at index " + x);
  x++;
  document.getElementById("text1").value = "";
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quote Gen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+		<h1>Simple Quote Generator</h1>
+		<div id="quoteDisplay">
+			<!-- Quotes will diwsplay here -->
+		</div>
+		<button onclick="newQuote()">New Quote</button>
+		<br>
+
+		<button onclick="addPlayers()">Add players</button>
+		<br>
+		<div id="player1">
+			<!-- borde vara här -->
+		</div>
+		
+		<br>
+		<input type="text" id="text1"></input>
+		<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+		<input type="button" id="button2" value="Display" onclick="display_array();"></input>
+		<div id="Result"></div> 
+		<script src="javascript.js"></script>
+
+		<br>
+
+		<!-- Trigger/Open The Modal -->
+		<button id="myBtn">Open Modal</button>
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+  		<!-- Modal content -->
+  		<div class="modal-content">
+    		<span class="close">&times;</span>
+    		<p>Some text in the Modal..</p>
+  		</div>
+
+</div>
+</body>
+</html>
