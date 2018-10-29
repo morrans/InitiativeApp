@@ -1,37 +1,221 @@
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
+body {
+    margin: 0px;
+    background-color: rgb(245,234,220);
+    height: 100vh;
+    position: relative;
+}
+.nav-upper-container {
+    position: fixed;
+    background: #50404F;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    left: 0;
+    height: 70px;
+    width: 100%;
+}
+.nav-upper-up {
+    background: #3C2F3E;
+    height: 24px;
+}
+.nav-upper-bottom {
+    height: 56px;
+    width: 100%;
+    background: #50404F;
+}
+.headerIcon {
+    display:inline-block;
+    width: 56px;
+    height: 28px;
+    margin-left: 25px;
+    bottom: 15px;
+}
+.headerIcon img {
+    width: 32px;
+    height: 28px;
+}
+.headerTitle {
+    display:inline-block;
+    width: 100px;
+    font-family: Brokenscript;
+    color: #ffffff; 
+    font-size: 24px;
+    margin-left: 20px;
+    bottom: 15px;
+    height: 56px;
 }
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
+.addPlayer {
     float: right;
-    font-size: 28px;
-    font-weight: bold;
+    height: 56px;
+    width: 23px;
+}
+.addPlayer img {
+    height: 20px;
+    width: 23px;
+}
+.nav-bottom-container {
+    background: rgb(245,234,220);
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0px;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+}
+.nav-bottom {
+    background: rgb(250, 246, 241);
+    height: 60px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.sortImage {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    /* half of image height */
+    /* right space */
+  }
+  
+  .sortImage img {
+    width: 75px;
+    height: 75px;
+  }
+
+.scoreBoard {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(245, 234, 220);
+    width: 100%;
+    top: 70px;
+    padding-bottom: 60px;
+    padding-top: 70px;
+
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.scoreCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(250, 246, 241);
+    width: 92%;
+    height: 75px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.scorePoints {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(245, 234, 220);
+    border-radius: 15px;
+    
+    text-align: center;
+    font-family: 'BebasNeueRegular'; 
+    font-weight: normal; 
+    font-style: normal; 
+    font-size: 25px;
+}
+.plusButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+    outline: none;
+}
+.plusButton img {
+    height: 30px;
+    width: 30px;
+}
+.playerName {
+    width: 150px;
+    overflow: hidden;
+    margin-left: 15px;
+    font-size: 25px;
+    font-family: 'BebasNeueRegular'; 
+    font-weight: normal; 
+    font-style: normal; 
+}
+.minusButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.minusButton img {
+    height: 30px;
+    width: 30px;
+}
+.scrambleButton {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 5%;
+}
+.avatar-container {
+    height: 45px;
+    width: 45px;
+    margin-left: 18px;
+}
+.avatarImage {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+}
+.avatarImage img {
+    height: 45px;
+    width: 45px;
+}
+.avatarBanner {
+    position: absolute;
+    left: 25px;
+    transform: translate(0%, -21px);
+    /* half of image height */
+    /* right space */
+  }
+.avatarBanner img {
+    width: 30px;
+    height: 30px;
+  }
+.avatar {
+	text-decoration:none;
+	background:#36bed4;
+	color:#36bed4;
+	position:relative;
+	padding-left:0px;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	display:block;
+	line-height:100%;
+    overflow:hidden;
+    margin-left: 18px;
+}
+.avatar:before, .avatar:after {
+	position:absolute;
+	color:#36bed4;
+	background:white;
+	box-shadow:0 0 10px 0px rgba(0,0,0,0.2);
+}
+.avatar:before {
+	content: "\00a0";
+	border: 0px solid white;
+	border-radius: 50%;
+	top: 10px;
+	left: 50%;
+	height: 19px;
+	width: 19px;
+	line-height: 20%;
+    margin-left: -0%;
+    transform: translate(-50%, 0%);
+}
+.avatar:after {
+	content: "\00a0";
+	border-radius: 50%;
+	top: 33px;
+	left: 50%;
+	width: 50px;
+	height: 51px;
+    line-height: 30%;
+    transform: translate(-50%, 0%);
 }
