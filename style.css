@@ -9,7 +9,7 @@ body {
     background: #50404F;
     top: 0;
     left: 0;
-    height: 70px;
+    /*height: 70px;*/
     width: 100%;
 }
 .nav-upper-up {
@@ -17,40 +17,50 @@ body {
     height: 24px;
 }
 .nav-upper-bottom {
-    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    /*height: 56px;*/
     width: 100%;
     background: #50404F;
 }
 .headerIcon {
-    display:inline-block;
-    width: 56px;
-    height: 28px;
-    margin-left: 25px;
-    bottom: 15px;
+    /*display:inline-block;
+    bottom: 15px;*/
+    height: 56px;
+    display: flex;
+    align-items: center;
 }
 .headerIcon img {
-    width: 32px;
+    /*width: 32px;*/
     height: 28px;
 }
 .headerTitle {
-    display:inline-block;
-    width: 100px;
+    /*display:inline-block;*/
+    /*width: 100px;*/
     font-family: Brokenscript;
     color: #ffffff; 
     font-size: 24px;
-    margin-left: 20px;
-    bottom: 15px;
     height: 56px;
+    display: flex;
+    align-items: center;
+    /*bottom: 15px;*/
+}
+.headerTitle span {
+    height: 24px;
 }
 
 .addPlayer {
-    float: right;
+    /*float: right;
+    width: 23px;*/
     height: 56px;
-    width: 23px;
+    display: flex;
+    align-items: center;
 }
 .addPlayer img {
     height: 20px;
-    width: 23px;
+    /*width: 23px;*/
 }
 .nav-bottom-container {
     background: rgb(245,234,220);
@@ -89,7 +99,7 @@ body {
     align-items: center;
     background-color: rgb(245, 234, 220);
     width: 100%;
-    top: 70px;
+    top: 80px;
     padding-bottom: 60px;
     padding-top: 70px;
 
@@ -129,13 +139,20 @@ body {
     width: 30px;
 }
 .playerName {
+    height: 75px;
     width: 150px;
     overflow: hidden;
     margin-left: 15px;
-    font-size: 25px;
-    font-family: 'BebasNeueRegular'; 
-    font-weight: normal; 
-    font-style: normal; 
+    font-size: 18px;
+    font-family: Brokenscript;
+    color: #431D06;
+    /*font-family: 'BebasNeueRegular'; */
+    display: flex;
+    align-items: center;
+
+}
+.playerName span {
+    height: 18px;
 }
 .minusButton {
     display: flex;

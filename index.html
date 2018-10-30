@@ -45,7 +45,9 @@
                     </div>
                 </div> 
                 <!-- <a class="avatar" href="#">Your Account</a> -->
-                <div class="playerName">{{ player.playerName }}</div>
+                <div class="playerName">
+                    <span>{{ player.playerName }}</span>
+                </div>
                 <button v-on:click="reduceScore"
                     class="minusButton"
                     @mouseover="activePlayer(index)">
